@@ -15,7 +15,6 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   final List<Widget> tabs = const [
-    NewsPageView(),
     CommunityListPage(),
     AnalysisPageView(),
     SettingsPageView()
@@ -29,7 +28,6 @@ class _MainPageState extends State<MainPage> {
         backgroundColor: secondColor,
         activeColor: activeColor,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: "News"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Community"),
           BottomNavigationBarItem(
               icon: Icon(Icons.auto_graph), label: "Analysis"),

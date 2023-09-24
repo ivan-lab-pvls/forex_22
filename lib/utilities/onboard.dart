@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
                 const SizedBox(height: 6),
                 Text(
-                  "Read our daily news, community",
+                  "Read our daily assets, community",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.dmSans(
                     fontSize: 18,

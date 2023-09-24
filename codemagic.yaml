@@ -1,0 +1,9 @@
+workflows:
+  version: 2
+  build:
+    name: Build APK
+    environment:
+      flutter: latest
+    script:
+      - flutter packages get
+      - flutter build apk --release
