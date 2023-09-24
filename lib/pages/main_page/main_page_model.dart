@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:forextradingapp/pages/community_page/detail_pages/community.dart';
+import 'package:forextradingapp/pages/calculator_page/calculator_page.dart';
+import 'package:forextradingapp/pages/community_page/community.dart';
 import '../../utilities/consts/colors.dart';
 import '../analysis_page/analysis_page.dart';
 import '../news_page/news_page.dart';
@@ -16,7 +17,9 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final List<Widget> tabs = const [
     CommunityListPage(),
+    NewsPageView(),
     AnalysisPageView(),
+    CalculatorPageView(),
     SettingsPageView()
   ];
 
@@ -29,8 +32,11 @@ class _MainPageState extends State<MainPage> {
         activeColor: activeColor,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Community"),
+          BottomNavigationBarItem(icon: Icon(Icons.line_style), label: "News"),
           BottomNavigationBarItem(
               icon: Icon(Icons.auto_graph), label: "Analysis"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.calculate), label: "Calculator"),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: "Settings")
         ],
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:forextradingapp/utilities/consts/news_constants.dart';
+import 'package:forextradingapp/utilities/enums/news_constants.dart';
 import 'package:forextradingapp/utilities/samples/icon_star.dart';
 
 import '../../pages/community_page/detail_pages/community_detail_page.dart';

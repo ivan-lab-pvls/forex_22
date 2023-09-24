@@ -4,7 +4,7 @@ import 'package:forextradingapp/utilities/consts/colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-import 'detail_pages/community_list.dart';
+import '../../utilities/enums/community_list.dart';
 
 class CommunityDetailsPage extends StatefulWidget {
   final CommunityView community;
