@@ -4,8 +4,16 @@ import 'package:forextradingapp/pages/community_page/community_page_view.dart';
 import 'package:forextradingapp/utilities/consts/colors.dart';
 import 'package:forextradingapp/utilities/consts/texts.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
-import 'community_list.dart';
+import '../../utilities/samples/widget_card.dart';
+import '../../utilities/enums/community_list.dart';
+
+DateTime now = DateTime.now();
+
+// Define the desired format
+DateFormat dateFormat = DateFormat('MMMd');
+String formattedDate = dateFormat.format(now);
 
 final List<String> _watchedVideos = [];
 
@@ -31,6 +39,39 @@ class _CommunityListPageState extends State<CommunityListPage> {
                   child: PageText(text: "Read our community"),
                 ),
                 SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    WidgetCard(
+                      title: 'Total',
+                      count: '${CommunityList.stats.length}',
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    WidgetCard(
+                      title: 'Viewed',
+                      count: '${CommunityList.stats.length}',
+                    ),
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    WidgetCard(
+                      title: 'Date',
+                      count: '$formattedDate',
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Divider(
+                  color: Color(
+                    0xFF1F2257,
+                  ),
+                ),
+                SizedBox(
                   child: Stack(
                     children: [
                       Column(
@@ -47,10 +88,12 @@ class _CommunityListPageState extends State<CommunityListPage> {
                                   onPressed: () {
                                     if (!_watchedVideos.contains(
                                         CommunityList.stats[index].title)) {
-                                      setState(() {
-                                        _watchedVideos.add(
-                                            CommunityList.stats[index].title);
-                                      });
+                                      setState(
+                                        () {
+                                          _watchedVideos.add(
+                                              CommunityList.stats[index].title);
+                                        },
+                                      );
                                     }
                                     Navigator.of(context).push(
                                       MaterialPageRoute(

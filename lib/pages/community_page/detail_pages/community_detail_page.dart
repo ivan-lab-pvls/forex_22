@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forextradingapp/utilities/consts/colors.dart';
-import 'package:forextradingapp/utilities/consts/news_constants.dart';
+import 'package:forextradingapp/utilities/enums/news_constants.dart';
 
 import '../../../utilities/consts/texts.dart';
 
